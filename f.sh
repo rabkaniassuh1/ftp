@@ -1,5 +1,6 @@
 #!/bin/bash
-cd && cd /etc
+sudo apt install vsftpd -y
+cd && cd /etc/
 echo "# Example config file /etc/vsftpd.conf
 #
 # The default compiled in settings are fairly paranoid. This sample file
