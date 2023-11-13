@@ -1,6 +1,6 @@
 #!/bin/bash
 cd / && apt update && apt upgrade -y && python -m pip install --upgrade pip setuptools wheel
-python -m pip install jedi fastapi kaleido python-multipart uvicorn && python -m pip install libtorrent && sudo apt-get install python-libtorrent
+python -m pip install jedi fastapi kaleido python-multipart uvicorn && python -m pip install lbry-libtorrent && sudo apt-get install python3-libtorrent
 sudo mkdir -p /home/ftpuser/ftp && sudo apt install vsftpd -y
 pip install colab-xterm
 %load_ext colabxterm
