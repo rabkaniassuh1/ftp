@@ -1,8 +1,7 @@
 #!/bin/bash
 cd / && apt update && apt upgrade -y && python -m pip install --upgrade pip setuptools wheel
 python -m pip install jedi fastapi kaleido python-multipart uvicorn && python -m pip install libtorrent && sudo apt-get install python3-libtorrent
-sudo mkdir -p /home/ftpuser/ftp && sudo apt install vsftpd -y
-python -m pip install --upgrade pip setuptools wheel && pip install colab-xterm
+sudo apt install vsftpd -y && python -m pip install --upgrade pip setuptools wheel && pip install colab-xterm
 cd && cd /etc/
 echo "# Example config file /etc/vsftpd.conf
 #
@@ -160,4 +159,4 @@ ssl_enable=NO
 # Uncomment this to indicate that vsftpd use a utf8 filesystem.
 #utf8_filesystem=YES" > vsftpd.conf
 sudo service vsftpd restart && sudo adduser ftpuser && sudo passwd ftpuser
-sudo chown ftpuser:ftpuser /home/ftpuser/ftp && sudo chmod 777 /home/ftpuser/ftp
+sudo mkdir -p /home/ftpuser/ftp && sudo chown ftpuser:ftpuser /home/ftpuser/ftp && sudo chmod 777 /home/ftpuser/ftp
