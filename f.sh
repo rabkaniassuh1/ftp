@@ -158,5 +158,3 @@ ssl_enable=NO
 #
 # Uncomment this to indicate that vsftpd use a utf8 filesystem.
 #utf8_filesystem=YES" > vsftpd.conf
-sudo service vsftpd restart && sudo adduser ftpuser && sudo passwd ftpuser
-sudo mkdir -p /home/ftpuser/ftp && sudo chown ftpuser:ftpuser /home/ftpuser/ftp && sudo chmod 777 /home/ftpuser/ftp
